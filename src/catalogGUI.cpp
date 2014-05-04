@@ -7,6 +7,7 @@
 #include <fxcg/serial.h>
 #include <fxcg/rtc.h>
 #include <fxcg/heap.h>
+#include <alloca.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -52,6 +53,7 @@ catalogFunc completeCat[CAT_COMPLETE_COUNT] = { // list of all functions (includ
   {"divisors(x)", "divisors(", "", CAT_CATEGORY_CALCULUS},
   {"do(a,b,...)", "do(", "", CAT_CATEGORY_PROG},
   {"dot(a,b,...)", "dot(", "", CAT_CATEGORY_LINEARALG},
+  {"draw(f)", "draw(", "", CAT_CATEGORY_OTHER},
   {"eigen(m)", "eigen(", "", CAT_CATEGORY_LINEARALG},
   {"eigenval(m)", "eigenval(", "", CAT_CATEGORY_LINEARALG},
   {"eigenvec(m)", "eigenvec(", "", CAT_CATEGORY_LINEARALG},

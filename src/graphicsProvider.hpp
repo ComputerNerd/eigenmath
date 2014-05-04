@@ -16,7 +16,12 @@
 
 #define TNYIM_ORANGE 0xd222
 int PrintMiniFix( int x, int y, const char*Msg, const int flags, const short color, const short bcolor ); 
-void plot(int x0, int y0,unsigned short color);
+//draws a point of color color at (x0, y0) 
+static inline void plot(int x0, int y0,unsigned short color) {
+  unsigned short* VRAM = (unsigned short*)0xA8000000;
+  VRAM += (y0*LCD_WIDTH_PX + x0);
+  *VRAM=color;
+}
 void drawRectangle(int x, int y, int width, int height, unsigned short color);
 void drawLine(int x1, int y1, int x2, int y2, int color);
 //void VRAMReplaceColorInRect(int x, int y, int width, int height, color_t color_old, color_t color_new);

@@ -7,6 +7,7 @@
 #include <fxcg/serial.h>
 #include <fxcg/rtc.h>
 #include <fxcg/heap.h>
+#include <alloca.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>

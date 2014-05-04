@@ -78,13 +78,6 @@ int PrintMiniFix( int x, int y, const char*Msg, const int flags, const short col
   return x;
 }
 
-//draws a point of color color at (x0, y0) 
-void plot(int x0, int y0,unsigned short color) {
-  unsigned short* VRAM = (unsigned short*)0xA8000000;
-  VRAM += (y0*LCD_WIDTH_PX + x0);
-  *VRAM=color;
-}
-
 void drawRectangle(int x, int y, int width, int height, unsigned short color){
   unsigned short*VRAM = (unsigned short*)0xA8000000;
   VRAM+=(y*384)+x;
